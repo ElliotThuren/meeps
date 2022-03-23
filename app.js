@@ -3,12 +3,18 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const nunjucks = require('nunjucks')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const testRouter = require('./routes/test');
 
 const app = express();
+
+nunjucks.configure('views', {
+  autoescape: true,
+  express: app
+});
 
 app.use(logger('dev'));
 app.use(express.json());
