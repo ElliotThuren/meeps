@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
 router.get('/', async  function(req, res, next) {
   let  data = {
     message: 'Hello world!',
@@ -12,7 +8,7 @@ router.get('/', async  function(req, res, next) {
     title: 'Nunjucks example'
   }
 
-  res.render('index.njk', data)
+  res.render('index.njk')
 })
 
 module.exports = router;
