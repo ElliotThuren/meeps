@@ -21,7 +21,7 @@ router.get('/', async (req, res, next) => {
             console.log(err);
             res.status(500).json({
                 meeps: {
-                    error: 'Error getting meeps',
+                    error: 'Error getting SELECT ORDER meeps',
                 },
             });
         });
@@ -50,7 +50,7 @@ router.get('/:id', async (req, res, next) => {
             console.log(err);
             res.status(500).json({
                 meep: {
-                    error: 'Error getting meeps',
+                    error: 'Error getting SELECT WHERE meeps',
                 },
             });
         });
@@ -81,7 +81,7 @@ router.get('/:id/delete', async (req, res, next) => {
             console.log(err);
             res.status(500).json({
                 meep: {
-                    error: 'Error getting meeps',
+                    error: 'Error getting DELETE meeps',
                 },
             });
         });
@@ -117,7 +117,7 @@ router.post('/', async (req, res, next) => {
             console.log(err);
             res.status(500).json({
                 meep: {
-                    error: 'Error getting meeps',
+                    error: 'Error getting INSERT INTO meeps',
                 },
             });
         });

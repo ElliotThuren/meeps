@@ -31,7 +31,7 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-    secret: 'Jaggillarfrukttårta',
+    secret: 'jaggillarfrukttårta',
     resave: false,
     saveUninitialized: true,
     cookie: { sameSite: true }
